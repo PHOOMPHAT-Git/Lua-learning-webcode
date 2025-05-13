@@ -39,7 +39,7 @@ body {
 }
 .custom-select {
   position: relative;
-  width: 200px;
+  width: 250px;
   user-select: none;
   text-align: center;
   font-size: 1rem;
@@ -217,4 +217,11 @@ body {
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #aaa, #aaa, #aaa);
   transition: background-color 0.3s;
+}
+
+@media (max-width: 768px) {
+  .custom-select {
+    width: 100%;
+    max-width: none;
+  }
 }
