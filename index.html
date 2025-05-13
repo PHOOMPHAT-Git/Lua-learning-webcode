@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lua learning</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="controls">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search..."
+        autocomplete="off"
+      />
+
+      <div class="custom-select" id="chapter-select">
+        <div class="selected" data-value="">บทที่ 1</div>
+        <div class="options-container">
+          <div class="option" data-value="1">บทที่ 1</div>
+          <div class="option" data-value="favorite">รายการโปรด</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="examples"></div>
+  </div>
+
+  <script src="https://unpkg.com/fengari-web@0.1.4/dist/fengari-web.js"></script>
+  <script src="https://unpkg.com/monaco-editor@0.34.1/min/vs/loader.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

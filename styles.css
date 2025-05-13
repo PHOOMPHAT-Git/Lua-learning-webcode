@@ -1,0 +1,220 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  color: #ddd;
+  font-family: sans-serif;
+}
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#search {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #2b2b2b;
+  color: #eee;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+#search:focus {
+  outline: none;
+  border-color: rgb(250, 255, 178);
+}
+.custom-select {
+  position: relative;
+  width: 200px;
+  user-select: none;
+  text-align: center;
+  font-size: 1rem;
+}
+.custom-select .selected {
+  padding: 0.75rem 1rem;
+  background: #2b2b2b;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #eee;
+  cursor: pointer;
+}
+.custom-select .options-container {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  right: 0;
+  background: #262626;
+  border: 1px solid #444;
+  border-radius: 6px;
+  overflow: hidden;
+  max-height: 0;
+  z-index: 10;
+  opacity: 0; transition: max-height 0.3s ease, opacity 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+.custom-select.open .options-container {
+  background: #262626;
+  border-color: #444;
+  opacity: 1;
+  max-height: 200px;
+}
+.custom-select .option {
+  padding: 0.75rem 1rem;
+  color: #ddd;
+  cursor: pointer;
+}
+.custom-select .option:hover {
+  background: #333;
+}
+
+.script-block {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #262626;
+}
+.script-block h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: rgb(250, 255, 178);
+}
+.script-block p {
+  margin: 0 0 1rem;
+  color: #a3a3a3;
+}
+.run-button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #3b3b3b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.run-button:hover {
+  background: #555;
+}
+.output-container {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #1b1b1b;
+  color: rgb(250, 255, 178);
+  font-family: monospace;
+  min-height: 2rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+  white-space: pre-wrap;
+}
+.edit-button {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #3b3b3b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.edit-button:hover {
+  background: #555;
+}
+.editor-container {
+  height: 250px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.editor-container.edit-mode {
+  height: 650px;
+}
+.editor-container.expanded {
+  height: 650px !important;
+}
+.clear-button,
+.reset-button {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #3b3b3b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.clear-button:hover,
+.reset-button:hover {
+  background: #555;
+}
+.show-button {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.show-button:hover {
+  background: #555;
+}
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.favorite-button {
+  margin-top: 0.5rem;
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+.favorite-button:hover {
+  background: #555;
+}
+.script-block {
+  border: 0.2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.script-block.favorite {
+  border-color: rgb(250, 255, 178);
+}
+
+::-webkit-scrollbar {
+  width: 3.5px;
+}
+  
+::-webkit-scrollbar-track {
+  background: #00000000;
+}
+  
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #aaa, #aaa, #aaa);
+  transition: background-color 0.3s;
+}
